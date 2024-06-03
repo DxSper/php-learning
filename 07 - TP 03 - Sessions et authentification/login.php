@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +79,6 @@ body {
         </button>
         <br>
          <?php
-         session_start();
          if (isset($_SESSION['login_error'])) {
           echo '<div class="alert alert-danger">' . htmlspecialchars($_SESSION['login_error'], ENT_QUOTES, 'UTF-8') . '</div>';
           unset($_SESSION['login_error']);
